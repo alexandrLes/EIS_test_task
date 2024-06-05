@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from celery_worker import make_celery
+from tasks import make_celery, calculate_rent_task
 
 db = SQLAlchemy()
 app = Flask(__name__)
